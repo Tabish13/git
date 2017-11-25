@@ -9,7 +9,6 @@ class AddressController extends Controller
 {
   public function store(Request $request)
 {
-
   $this->validate($request,[
     'address'=>'required',
     'city'=>'required',

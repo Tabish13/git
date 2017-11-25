@@ -4,10 +4,10 @@
 <div class="container" style="padding:4em 0">
 <div class="small-6 small-centered columns">
 
-  <h3>Shipping Info</h3>test gitanjali
+  <h3>Shipping Info</h3>
   <form  action="{{route('address.store')}}" method="post">
 {{csrf_field()}}
-
+{{method_field('PUT')}}
               <fieldset class="form-group">
           <label for="address">Address</label>
           <input type="text" class="form-control" name="address" id="address" placeholder="Address">

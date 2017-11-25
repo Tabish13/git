@@ -4,7 +4,7 @@
 <div class="container" style="padding:4em 0">
 <div class="small-6 small-centered columns">
 
-  <h3>Shipping Info</h3>
+  <h3>Shipping Info</h3>test gitanjali
   <form  action="{{route('address.store')}}" method="post">
 {{csrf_field()}}
 

@@ -7,7 +7,7 @@
   <h3>Shipping Info</h3>
   <form  action="{{route('address.store')}}" method="post">
 {{csrf_field()}}
-{{method_field('PUT')}}
+{{method_field('PATCH')}}
               <fieldset class="form-group">
           <label for="address">Address</label>
           <input type="text" class="form-control" name="address" id="address" placeholder="Address">

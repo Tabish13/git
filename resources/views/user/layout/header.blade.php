@@ -35,7 +35,7 @@
             {{$product->price}}*{{$product->qty}}</span></li>
               <div class="login_buttons">
                 <div class="check_button"><a href="checkout.html">Check out</a></div>
-                {{-- <div class="login_button"><a href="login.html">Login</a></div> --}}
+                {{-- <div class="login_button"><a href="login.html">Login</a></div> 
                 <div class="clear"></div>
               </div>
               <div class="clear"></div>

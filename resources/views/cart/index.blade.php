@@ -11,7 +11,6 @@
             <th>Name</th>
             <th>Price</th>
             <th>Quantity</th>
-            <th>Size</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -21,7 +20,7 @@
               <td>{{$cartItem->name}}</td>
               <td>{{$cartItem->price}}</td>
               <td width="30px">
-
+                @include('includes.messages')
                 <form class="" action="{{route('cart.update',$cartItem->rowId)}}" method="post">
                   {{csrf_field()}}
                   {{ method_field('PATCH') }}
@@ -31,7 +30,7 @@
 
                 <td>  <input style="float:left" type="submit" class="btn btn-sm btn-default" name="" value="OK">
                 </form>
-
+                @include('includes.messages')
                 <form class="" action="{{route('cart.destroy',$cartItem->rowId)}}" method="post">
                   {{csrf_field()}}
                   {{method_field('DELETE')}}
@@ -55,5 +54,5 @@
         </table>
         <a href="{{route('checkout.shipping')}}" class="btn btn-info">Checkout</a>
       </div>
-</div>
-    @endsection
+    </div>
+  @endsection

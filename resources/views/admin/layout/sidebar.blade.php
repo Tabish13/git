@@ -8,6 +8,7 @@
       </div>
       <div class="pull-left info">
         <p>Admin name</p>
+        {{-- <p>{{ Auth::user()->name }}</p> --}}
         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
       </div>
     </div>
@@ -26,36 +27,63 @@
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">MAIN NAVIGATION</li>
-      <li class="treeview">
-        <a href="#">
-          <i class="fa fa-pie-chart"></i>
-          <span>Charts</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-          <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-          <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-          <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
-        </ul>
-      </li>
-      <li class="treeview">
-        <span><li><a href="{{ route('products.index')}}"><i class="fa fa-circle-o"></i> Products</a></li>
-        </span>
-        {{-- <ul class="treeview-menu">
-        <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> Add Products</a></li>
-        <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Products</a></li>
+      {{-- <li class="treeview">
+      <a href="#">
+      <i class="fa fa-pie-chart"></i>
+      <span>Charts</span>
+      <span class="pull-right-container">
+      <i class="fa fa-angle-left pull-right"></i>
+    </span>
+  </a>
+  <ul class="treeview-menu">
+  <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
+  <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
+  <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
+  <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+</ul>
+</li> --}}
 
-      </ul> --}}
-      </li>
-      <li class="treeview">
+<li class="treeview">
+  <a href="#">
 
-          <li><a href="{{ route('category.index')}}"><i class="fa fa-circle-o"></i> Category</a></li>
-          {{-- <li><a href="{{ route('category.index')}}"><i class="fa fa-circle-o"></i> Show Category</a></li> --}}
-          </li>
-    </ul>
+    <span>Products</span>
+    <span class="pull-right-container">
+      <i class="fa fa-angle-left pull-right"></i>
+    </span>
+  </a>
+  <ul class="treeview-menu">
+    <li><a href="{{ route('products.create')}}"><i class="fa fa-circle-o"></i>Add Products</a></li>
+    <li><a href="{{ route('products.index')}}"><i class="fa fa-circle-o"></i> Show Products</a></li>
+  </ul>
+</li>
+<li class="treeview">
+  <a href="#">
+
+    <span>Category</span>
+    <span class="pull-right-container">
+      <i class="fa fa-angle-left pull-right"></i>
+    </span>
+  </a>
+  <ul class="treeview-menu">
+    <li><a href="{{ route('category.create')}}"><i class="fa fa-circle-o"></i>Add Category</a></li>
+    <li><a href="{{ route('category.index')}}"><i class="fa fa-circle-o"></i> Show Category</a></li>
+  </ul>
+</li>
+<li class="treeview">
+  <a href="#">
+
+    <span>Orders</span>
+    <span class="pull-right-container">
+      <i class="fa fa-angle-left pull-right"></i>
+    </span>
+  </a>
+  <ul class="treeview-menu">
+    <li><a href="{{url('admin/orders/pending')}}"><i class="fa fa-circle-o"></i>Pending Orders</a></li>
+    <li><a href="{{url('admin/orders/delivered')}}"><i class="fa fa-circle-o"></i>Delivered Orders</a></li>
+    <li><a href="{{url('admin/orders')}}"><i class="fa fa-circle-o"></i>All Orders</a></li>
+  </ul>
+</li>
+</ul>
 </section>
 <!-- /.sidebar -->
 </aside>

@@ -9,17 +9,17 @@ class AddressController extends Controller
 {
   public function store(Request $request)
   {
-
+// dd($request->all());
     $this->validate($request,[
       'address'=>'required',
       'city'=>'required',
       'state'=>'required',
       'zip'=>'required|integer',
-      'phone'=>'required|integer',
+      'phone'=>'required',
     ]);
-    dd("go");
+
     Auth::user()->address()->create($request->all());
-    return redirect()->route('checkout.payment');
+    return redirect()->route('storePayment');
 
   }
 }

@@ -19,8 +19,9 @@ class Order extends Model
   }
   public static function createOrder(){
       $user=Auth::user();
+      //dd(Cart::total(2, '.', ''));
       $order=$user->orders()->create([
-          'total'=>Cart::total(),
+          'total'=>Cart::total(2, '.', ''),
           'delivered'=>0
       ]);
       $cartItems=Cart::content();
@@ -30,5 +31,6 @@ class Order extends Model
               'total'=>$cartItem->qty*$cartItem->price
           ]);
       }
+      return $order->id;
 }
 }

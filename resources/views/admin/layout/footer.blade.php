@@ -1,6 +1,6 @@
 <footer class="main-footer">
 
-  <strong>Copyright &copy; 2017 <a href="#">Feet and Feel</a>.</strong>
+  <strong>Copyright &copy; 2017 <a href="#">Ecom demo</a>.</strong>
 </footer>
 
 <!-- jQuery 3 -->

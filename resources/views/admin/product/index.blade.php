@@ -6,6 +6,7 @@
 
 @section('main-content')
   <div class="product_details col-md-6 offset-md-3">
+    @include('includes.messages')
     <form role="form" class="" action="{{ route('products.store')}}" method="post" enctype="multipart/form-data">
       {{csrf_field()}}
       <div class="box-body">
@@ -57,8 +58,8 @@
 {{-- @section('bg-img',Storage::disk('local')->url($product->image)) --}}
 {{-- @stop --}}
 @section('footerSection')
-<script src="{{ asset('admin/bower_components/select2/dist/js/select2.full.min.js') }}"></script>
-<script>
+  <script src="{{ asset('admin/bower_components/select2/dist/js/select2.full.min.js') }}"></script>
+  <script>
   $(document).ready(function() {
     $(".select2").select2();
   });

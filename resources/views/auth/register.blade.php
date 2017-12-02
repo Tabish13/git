@@ -8,6 +8,7 @@
                 <div class="panel-heading">Register</div>
 
                 <div class="panel-body">
+                  @include('includes.messages')
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 

@@ -6,7 +6,7 @@
   <ul>
     @foreach($orders as $order)
       <li>
-        <h4>Order by {{$order->user->name}} <br> Total Price {{$order->total}}</h4>
+        <h4>Order by {{$order->user->first_name}} <br> Total Price {{$order->total}}</h4>
         @include('includes.messages')
         <form action="{{route('toggle.deliver',$order->id)}}" method="POST" class="pull-right" id="deliver-toggle">
           {{csrf_field()}}

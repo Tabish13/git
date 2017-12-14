@@ -22,4 +22,8 @@ class ProductController extends Controller
   // {
   //   return $products = product::with('likes')->where('status',1)->orderBy('created_at','DESC')->paginate(5);
   // }
+  public function show()
+  {
+    return view('user/index');
+  }
 }
